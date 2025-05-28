@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niveau Modéré - Séisme de Magnitude 3 à 5</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaecee;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+        }
+
+         .navbar {
+            max-width: 900px;
+            width: 100%;
+            background-color: #f3efe19f;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:  #ff7300;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color:   #ff7300;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+         .nav-links a:hover {
+            text-decoration: underline rgb(0, 0, 0);
+            color: #000000;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            color: black;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #2c3e50;
+                flex-direction: column;
+                width: 200px;
+                padding: 20px;
+                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+                color: #000000;
+            }
+            .burger div {         
+            background-color: rgb(0, 0, 0);
+        }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 120px auto 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .icon svg {
+            width: 120px;
+            height: 160px;
+            fill: #ff6600;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ff6600;
+        }
+
+        h3 {
+            color:  #ff7300;
+            margin-top: 30px;
+        }
+
+        p, ul {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .conclusion {
+            background-color: #ffe6cc;
+            padding: 20px;
+            border-left: 5px solid #ff6600;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .separator {
+            margin: 30px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .footer-bottom p {
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
+
+        .footer-bottom {
+            margin-top: 110px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="logo">SéismeInfo</div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#prevent">Prévention</a>
+                <a href="index.html#alert">Alertes</a>
+                <a href="#">Inscriptions</a>
+            </div>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </div>
+
+<div class="container">
+
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+        </svg>
+    </div>
+
+    <h1>Niveau Modéré — Magnitude 3 à 6</h1>
+
+    <p>Les séismes de magnitude 3 à 6 sont dits modérés. Perceptibles par la population, surtout près de l’épicentre, ils causent rarement des dommages importants, bien que des bâtiments anciens ou mal entretenus puissent subir des effets mineurs.</p>
+
+    <div class="separator"></div>
+
+    <h3>2.1 Caractéristiques générales des séismes de magnitude 3 à 6</h3>
+    <ul>
+        <li><strong>Fréquence élevée :</strong> Ces événements, enregistrés plusieurs centaines de fois par semaine dans le monde, sont moins nombreux que les micro-séismes mais constituent une part notable de l’activité sismique globale.</li>
+        <li><strong>Zones concernées :</strong> Ils surviennent principalement dans des régions actives comme les failles tectoniques majeures (ex. : faille de San Andreas, fosse du Japon), les zones volcaniques (Islande, Indonésie) ou les zones de subduction (Ceinture de feu du Pacifique), ainsi que dans certaines zones internes sous tension.</li>
+        <li><strong>Rôle possible :</strong> Souvent isolés, ils peuvent précéder des secousses plus fortes (séismes précurseurs). Leur étude aide à surveiller les anomalies sismiques et à estimer les risques de répliques ou d’événements majeurs.</li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3>2.2 Effets ressentis par la population</h3>
+    <ul>
+        <li><strong>Secousses clairement perceptibles :</strong> Contrairement aux séismes faibles, ils sont nettement ressentis, surtout près d’un épicentre peu profond, évoquant le passage d’un gros camion ou une onde de choc.</li>
+        <li><strong>Réactions des objets et structures légères :</strong> Lampes et lustres oscillent, portes et fenêtres claquent, et des objets non fixés (cadres, petits meubles) peuvent bouger, interrompant brièvement les activités.</li>
+        <li><strong>Réactions humaines :</strong> Même sans dégâts, ils suscitent souvent une peur, surtout chez les novices, amplifiée par un grondement ou bruit sourd accompagnant les vibrations.</li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3>2.3 Conséquences sur les infrastructures</h3>
+    <ul>
+        <li><strong>Bâtiments récents :</strong> Les constructions modernes, conformes aux normes parasismiques, résistent bien, sans impact majeur.</li>
+        <li><strong>Structures anciennes :</strong> Des microfissures, du plâtre effrité ou de légers dommages peuvent apparaître, nécessitant parfois une vérification après plusieurs secousses.</li>
+        <li><strong>Objets instables et installations domestiques :</strong> Chutes de bibelots ou d’appareils non fixés sont courantes, pouvant causer de petites blessures, mais les réseaux (eau, électricité, télécoms) restent généralement intacts.</li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3>2.4 Comportement à adopter</h3>
+    <ul>
+        <li><strong>À l’intérieur :</strong> Se réfugier sous un meuble solide (table) ou près d’un mur porteur, loin des vitres.</li>
+        <li><strong>À l’extérieur :</strong> S’éloigner des façades, arbres, lignes électriques ou poteaux susceptibles de tomber.</li>
+        <li>Éviter les ascenseurs, même après la secousse, en prévision de répliques.</li>
+        <li>Rester à l’écoute des consignes des autorités locales, notamment pour les risques de répliques.</li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3>2.5 Exemples de séismes de niveau modéré</h3>
+    <ul>
+        <li><strong>Strasbourg, France — 12 novembre 2019 (Magnitude 3,1)</strong> : À 14h38, une secousse de magnitude 3,1 a été ressentie à Strasbourg, épicentre dans le quartier de la Robertsau. Bien que faible, elle a été largement perçue, liée à des activités géothermiques profondes. <br><em>Source : <a href="https://www.emsc-csem.org" target="_blank">EMSC</a></em></li>
+        <li><strong>Zagreb, Croatie — 22 mars 2020 (Magnitude 5,3)</strong> : Le plus fort séisme en 140 ans dans la région a endommagé la cathédrale et des hôpitaux, compliquant les secours pendant le confinement lié au COVID-19. <br><em>Source : <a href="https://www.bbc.com/news/world-europe-52002743" target="_blank">BBC News</a></em></li>
+        <li><strong>Tokyo, Japon — 7 octobre 2021 (Magnitude 5,9)</strong> : Une secousse a blessé plus de 30 personnes, perturbé les transports et endommagé des canalisations, marquant l’événement le plus intense à Tokyo en dix ans. <br><em>Source : <a href="https://www.reuters.com/world/asia-pacific/magnitude-59-quake-jolts-tokyo-area-2021-10-07" target="_blank">Reuters</a></em></li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3>2.6 Le saviez-vous ?</h3>
+    <ul>
+        <li>Un séisme de magnitude 6 libère <strong>100 fois plus d’énergie</strong> qu’un de magnitude 3.</li>
+        <li>Ces événements testent l’efficacité des plans de prévention.</li>
+        <li>Les capteurs sismiques enregistrent ces secousses pour perfectionner les alertes rapides.</li>
+    </ul>
+
+    <div class="conclusion">
+        <p>Les séismes de magnitude 3 à 6 rappellent le mouvement constant de la Terre. Généralement bénins, ils permettent de s’entraîner aux bons réflexes face au risque sismique.</p>
+    </div>
+
+</div>
+
+
+    <div class="footer-bottom">
+        <p>&copy 2025 CodeGeniuses & Co. Tous droits réservés.</p>
+    </div>
+
+
+        <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
+
+
+</body>
+</html>

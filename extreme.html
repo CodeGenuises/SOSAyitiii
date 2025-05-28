@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niveau Extrême - Séisme de Magnitude 9+</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaecee;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 900px;
+            width: 100%;
+            background-color: #f1efe6ea;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline rgb(0, 0, 0);
+            color: #000000;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            color: black;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #2c3e50;
+                flex-direction: column;
+                width: 200px;
+                padding: 20px;
+                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+                color: #000000;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 120px auto 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .icon svg {
+            width: 120px;
+            height: 160px;
+            fill: #000000;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #000000;
+        }
+
+        h3 {
+            color: #000000;
+            margin-top: 30px;
+        }
+
+        p, ul {
+            line-height: 1.6;
+            color: #000000;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #000000;
+            list-style-type: disc;
+        }
+
+        .conclusion {
+            background-color: #0000002c;
+            padding: 20px;
+            border-left: 5px solid #000000;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .separator {
+            margin: 30px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .footer-bottom p {
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
+
+        .footer-bottom {
+            margin-top: 110px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="navbar-wrapper">
+    <nav class="navbar">
+        <div class="logo">SéismeInfo</div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Accueil</a>
+            <a href="index.html#prevent">Prévention</a>
+            <a href="index.html#alert">Alertes</a>
+            <a href="#">Inscriptions</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+        </svg>
+    </div>
+
+    <h1>Niveau Extrême — Magnitude 9+</h1>
+    <p>Les séismes de magnitude 9 ou plus sont dits extrêmes, parmi les plus puissants connus. Ils provoquent des destructions massives, des tsunamis gigantesques et des impacts régionaux, voire mondiaux, dépassant souvent la résistance des infrastructures humaines.</p>
+
+    <div class="separator"></div>
+
+    <h3>4.1 Caractéristiques générales</h3>
+    <ul>
+        <li>Rares (moins d’un par décennie), ces événements sont extrêmement dangereux, avec seulement quelques cas enregistrés en un siècle.</li>
+        <li>Ils surviennent presque uniquement dans les zones de subduction (ex. : Japon, Chili, Alaska, Indonésie).</li>
+        <li>Associés à des tsunamis massifs, glissements de terrain et catastrophes industrielles (ex. : Fukushima).</li>
+    </ul>
+
+    <h3>4.2 Effets ressentis par la population</h3>
+    <ul>
+        <li>Secousses d’une intensité extrême durant plusieurs minutes.</li>
+        <li>Panique généralisée, embouteillages, évacuations chaotiques.</li>
+        <li>Blessures, effondrements, incendies, explosions.</li>
+        <li>Répliques très puissantes pendant des jours ou semaines.</li>
+    </ul>
+
+    <h3>4.3 Conséquences sur les infrastructures</h3>
+    <ul>
+        <li>Des milliers de bâtiments, ponts, routes et tunnels détruits ou inutilisables.</li>
+        <li>Perturbation des réseaux d’eau, électricité, gaz, télécoms.</li>
+        <li>Risque nucléaire, industriel ou environnemental (ex. : Fukushima 2011).</li>
+    </ul>
+
+    <h3>4.4 Comportement à adopter</h3>
+    <ul>
+        <li>Se mettre sous une table solide ou contre un mur porteur, loin des fenêtres.</li>
+        <li>Évacuer calmement, gagner un espace dégagé et se méfier des répliques.</li>
+        <li>En cas de tsunami, fuir immédiatement vers les hauteurs, même sans alerte.</li>
+        <li>Prévoir trousse de secours, nourriture, eau, radio, vêtements chauds.</li>
+    </ul>
+
+    <h3>4.5 Exemples de séismes extrêmes</h3>
+    <ul>
+        <li><strong>Sumatra (26/12/2004, M 9.1)</strong> – ~230 000 morts, tsunami dans 14 pays. [Lien](https://sos.noaa.gov/catalog/datasets/tsunami-historical-series-sumatra-2004/)</li>
+        <li><strong>Alaska (27/03/1964, M 9.2)</strong> – Tsunami jusqu’en Californie, 131 morts. [Lien](https://www.usgs.gov/centers/alaska-science-center/science/1964-great-alaska-earthquake-and-tsunami)</li>
+        <li><strong>Chili (22/05/1960, M 9.5)</strong> – Le plus fort jamais enregistré. [Lien](https://earthquake.usgs.gov/earthquakes/eventpage/official19600522191120)</li>
+    </ul>
+
+    <h3>4.6 Le saviez-vous ?</h3>
+    <ul>
+        <li>Magnitude 9 = 30x plus d’énergie qu’un 8, 900x plus qu’un 7.</li>
+        <li>Des systèmes d’alerte permettent quelques secondes d’avance (ex. : Japon, Chili).</li>
+        <li>Seule la préparation (éducation, normes, plans d’évacuation) limite les pertes humaines.</li>
+    </ul>
+
+    <div class="conclusion">
+        <p>Les séismes de magnitude 9+ sont un danger majeur. Leur gestion repose sur la préparation, la réactivité et la résilience des infrastructures.</p>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>&copy; 2025 CodeGeniuses & Co. Tous droits réservés.</p>
+</div>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('navLinks');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

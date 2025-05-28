@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niveau Faible - Séisme de Magnitude 0 à 3</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaecee;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 900px;
+            width: 100%;
+            background-color: #f3efe19f;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:  #2824f1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color:  #2824f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline rgb(0, 0, 0);
+            color: #000000;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            color: black;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #2c3e50;
+                flex-direction: column;
+                width: 200px;
+                padding: 20px;
+                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+                color: #000000;
+            }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 120px auto 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .icon {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .icon svg {
+            width: 90px;
+            height: 130px;
+            fill: #0033cc;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #0033cc;
+        }
+
+        h3 {
+            color: #0033cc;
+            margin-top: 30px;
+        }
+
+        p, ul {
+            color: black;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .conclusion {
+            background-color: #e0ebff;
+            padding: 20px;
+            border-left: 5px solid #0033cc;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .separator {
+            margin: 30px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .footer-bottom p {
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
+
+        .footer-bottom {
+            margin-top: 110px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar-wrapper">
+    <nav class="navbar">
+        <div class="logo">SéismeInfo</div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Accueil</a>
+            <a href="index.html#prevent">Prévention</a>
+            <a href="index.html#alert">Alertes</a>
+            <a href="#">Inscriptions</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+</div>
+
+<div class="container">
+
+    <div class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+        </svg>
+    </div>
+
+    <h1>Niveau Faible — Magnitude 0 à 3</h1>
+
+    <p>Les tremblements de terre de magnitude 0 à 3 sont qualifiés de faibles. Ces mouvements subtils de la croûte terrestre, souvent liés à des ajustements naturels des plaques tectoniques ou à des phénomènes volcaniques mineurs, sont généralement captés uniquement par des sismomètres. Dans de rares cas, des individus sensibles ou proches de l’épicentre peuvent les détecter. Ces secousses n’entraînent habituellement aucun dommage.</p>
+
+    <div class="separator"></div>
+
+    <h3>1.1 Dynamiques des séismes de magnitude 0 à 3 dans le monde</h3>
+    <ul>
+        <li>Ces séismes, très fréquents, sont enregistrés par milliers chaque jour à l’échelle planétaire.</li>
+        <li>Zones actives : Ceinture de feu du Pacifique, faille de San Andreas, zones volcaniques et certaines zones intra-plaques sous tension.</li>
+        <li>Rôle géodynamique : libèrent progressivement l’énergie accumulée, réduisant les contraintes locales.</li>
+    </ul>
+
+    <h3>1.2 Effets ressentis par la population</h3>
+    <ul>
+        <li>Rarement perceptibles, surtout dans les zones urbaines.</li>
+        <li>Peuvent être ressentis si l’épicentre est superficiel ou le sol meuble.</li>
+        <li>Similaires à une vibration de gros véhicule.</li>
+    </ul>
+
+    <h3>1.3 Conséquences sur les infrastructures</h3>
+    <ul>
+        <li>Aucun effet même sur les bâtiments les plus fragiles.</li>
+        <li>Aucune perturbation des réseaux essentiels.</li>
+        <li>La vie quotidienne reste inchangée.</li>
+    </ul>
+
+    <h3>1.4 Comportement à adopter</h3>
+    <ul>
+        <li>Rester calme, pas de risque immédiat.</li>
+        <li>Pas de mesures d’urgence ni évacuation nécessaires.</li>
+        <li>Si les secousses se répètent, une vigilance est recommandée.</li>
+        <li>Suivre les consignes des autorités ou des instituts sismiques.</li>
+    </ul>
+
+    <h3>1.5 Exemples de séismes de niveau faible</h3>
+    <ul>
+        <li><strong>Tricastin (France, 2002–2003)</strong> : essaims sismiques, magnitudes &lt;2, vibrations légères perçues.</li>
+        <li><strong>Nazko (Canada, 2007–2008)</strong> : séismes &lt;4.0 sans dégâts, informatifs pour la tectonique locale.</li>
+        <li><strong>France métropolitaine</strong> : 5 900 séismes/an détectés, dont 98,8 % &lt; magnitude 3.</li>
+    </ul>
+
+    <h3>1.6 Le saviez-vous ?</h3>
+    <ul>
+        <li>Ils permettent le suivi des failles actives et affinent les prévisions.</li>
+        <li>Certains sont d’origine anthropique (forages, géothermie, fracturation).</li>
+        <li>Exemple : Bâle (2006), projet géothermique interrompu après secousses provoquées.</li>
+    </ul>
+
+    <div class="conclusion">
+        <p>Les séismes de magnitude 0 à 3, sans danger pour la population, sont cruciaux pour surveiller l’activité sismique, comprendre les phénomènes tectoniques et évaluer les risques futurs.</p>
+    </div>
+</div>
+
+<div class="footer-bottom">
+    <p>&copy 2025 CodeGeniuses & Co. Tous droits réservés.</p>
+</div>
+
+<script>
+    function toggleMenu() {
+        const nav = document.getElementById('navLinks');
+        nav.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>

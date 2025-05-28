@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    max-width: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #333;
+}
+h1, h3, h5, a, span{
+  font-family: Arial, sans-serif;
+  /* font-family: 'Courier New'; */
+}
+/* Styles généraux */
+header {
+  text-align: center;
+}
+
+
+/* Ajustement du navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 20px; /* Réduction de la hauteur */
+  position: fixed; /* Fixe le navbar en haut de la page */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Assure que le navbar reste au-dessus des autres éléments */
+  background-color:rgb(255, 255, 255); /* Couleur de fond pour s'assurer qu'il est visible */
+  box-shadow: 0 8px 8px rgb(0, 0, 0); /* Optionnel : Ajoute une ombre pour démarquer */
+}
+  
+/* Ajustement du logo */
+.logo img {
+  height: 90px; /* Augmente légèrement la taille du logo */
+  padding-left: 20px; /* Réduction de l'espace à gauche */
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+  padding-right: 200px;
+}
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-links a:hover {
+  height: 40px;
+    text-decoration: underline 3px;
+  /* border-radius: 30px;
+  background-color: rgba(114, 114, 114, 0.178); */
+}
+/* Menu burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding-right: 20px;
+}
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Ajustement du logo */
+.logo img {
+  height: 90px; /* Augmente légèrement la taille du logo */
+  padding-left: 20px; /* Réduction de l'espace à gauche */
+}
+
+
+.home {
+    padding: 0 10%;
+    min-height: 70vh;
+    margin-top: 125px;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+}
+.site_desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.site_desc .right img {
+    width: 100%;
+    max-width: 325px; /* taille réduite */
+    height: 472px;
+    display: block;
+    margin-top: 0px;
+    margin: 0 auto; /* centrer horizontalement */
+}
+
+.site_desc .left {
+    width: 40%;
+}
+.site_desc .left h1 {
+  margin-top: 110px;
+    font-size: 30px;
+    color:#000000;
+}
+.site_desc .left p {
+    color: #999;
+    margin-top: 10px;
+}
+
+.site_desc .right {
+    width: 45%;
+    height: 350px;
+}
+.site_desc .right video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0 60px 0 60[x];
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 1000px) {
+header {
+ text-align: center;
+}
+
+.logo img {
+  height: 90px; /* Augmente légèrement la taille du logo */
+  padding-left: 20px; /* Réduction de l'espace à gauche */
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 20px; /* Réduction de la hauteur */
+  /* position: fixed; Fixe le navbar en haut de la page */
+  top: 0;
+  left: 0;
+  right: 0;
+  /* z-index: 1000; Assure que le navbar reste au-dessus des autres éléments */
+  background-color: #ffffff; /* Couleur de fond pour s'assurer qu'il est visible */
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.801); /* Optionnel : Ajoute une ombre pour démarquer */
+}
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding-right: 20px;
+}
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #000000;
+  margin: 3px 0;
+}
+.menu-container {
+  display: none;
+  position: absolute;  
+  top: 100%;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1.5px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.801);
+  width: 200px;
+  z-index: 1000;
+}
+.menu-container.active {
+  display: block;
+}
+.nav-links {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nav-links li {
+    margin: 0 15px;
+}
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+.nav-links a:hover {
+  border-radius: 0px;
+  background-color: #e7e7e7;
+  color: rgb(0, 0, 0);
+}
+
+
+.home {
+        margin: 50px 0;
+        margin-top: 150px;
+        padding: 0 20px;
+    }
+    .home .site_desc {
+        flex-direction: column-reverse;
+    }
+    .home .site_desc .left {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .home .site_desc .right {
+        width: 100%;
+    }
+    .site_desc .right video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 115px 0 115px 0;
+    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+}
+/* Responsive */
+@media ( (width <= 1000px)) {
+
+  .logo img {
+      padding-left: 10px;
+  }
+
+    .burger {
+      display: flex;
+  }
+
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px; /* Réduction de la hauteur */
+    /* position: fixed; Fixe le navbar en haut de la page */
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    width: 100%;
+    /* z-index: 1000; Assure que le navbar reste au-dessus des autres éléments */
+    background-color: #ffffff; /* Couleur de fond pour s'assurer qu'il est visible */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.801); /* Optionnel : Ajoute une ombre pour démarquer */
+  }
+  
+
+        .cta {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1px;
+            margin-top: 23px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .cta:hover {
+            background-color: #f0f9ff;
+            color: #000000;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+}
+
+.process {
+            margin-top: 70px;
+            background-color: rgb(245, 245, 245);
+            padding: 3rem 1rem;
+        }
+        .process h2 {
+            margin-top: 0px;
+            font-size: 1.875rem;
+            font-weight: bold;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .process-step {
+            text-align: center;
+        }
+        .process-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color:#000000;
+            margin-bottom: 0.5rem;
+        }
+        .process-description {
+            color: #262b31;
+        }
+        .process-view-more {
+            text-align: center;
+        }  
+
+        .cta {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1px;
+            margin-top: 23px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .cta:hover {
+            background-color: #f0f9ff;
+            color: #000000;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .prvt{
+          text-decoration: none;
+        }
+        .contact-banner {
+            background-color:#dd2121;
+            padding:10px 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+            opacity: 0.1;
+        }
+
+        .contact-banner h2 {
+            font-size: 48px;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            margin-top: 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .contact-banner p {
+            font-size: 25px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            max-width: 36rem;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .contact-cta {
+            display: inline-block;
+            background-color: rgb(0, 0, 0);
+            color: #ffffff;
+            padding: 1rem 3rem;
+            margin-bottom: 40px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 600;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .contact-cta:hover {
+            background-color: #f0f9ff;
+            color: #000000;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .offer-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.offer-section h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.offer-subtitle {
+  color: #777;
+  font-size: 14px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.offer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.offer-card a {
+    border: 2px solid #000000;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.offer-card a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.offer-card {
+    background: #fafafad5;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    width: 280px;
+    padding: 30px 20px;
+    text-align: center; /* centrage horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.offer-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.514);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+.offer-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+.offer-title0{
+    font-size: 18px;
+   color: #2824f1;
+    font-weight: bold;
+    margin-bottom: 0.1px;
+}
+.offer-title1{
+    font-size: 18px;
+   color: #ff7300;
+    font-weight: bold;
+    margin-bottom: 0.1px;
+}
+.offer-title2 {
+    font-size: 18px;
+    color:  #ff0000;
+    font-weight: bold;
+    margin-bottom: 0.1px;
+}
+.offer-title3 {
+    font-size: 18px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 0.1px;
+}
+.description0{
+    font-size: 14px;
+    color: #2824f1;
+    margin-bottom: 20px;
+}
+.description1{
+    font-size: 14px;
+    color: #ff7300;
+    margin-bottom: 20px;
+}
+.description2{
+    font-size: 14px;
+    color:  #ff0000;
+    margin-bottom: 20px;
+}
+.description3{
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.faible {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.modéré{
+    font-size: 14px;
+    color:  #000000;
+    margin-bottom: 10px;
+}
+.élevé{
+    font-size: 14px;
+    color:   #000000;
+    margin-bottom: 10px;
+}
+.extrême{
+    font-size: 14px;
+    color:   #000000;
+    margin-bottom: 10px;
+}
+.offer-link {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.about-stats-container {
+  margin-top: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 92%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  gap: 30px;
+}
+
+/* Bloc About Us (réduit et poussé à gauche) */
+.about-container {
+  height: 350px;
+  margin-top:auto;
+  flex: 1.5;
+  /* display: flex ; */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.466);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: auto;
+  padding-bottom: auto;
+  align-items: center;
+}
+.about-text {
+   margin-top: 10px;
+}
+.about-text h2 {
+   margin-bottom: 10px;
+   color: #2824f1;
+}
+
+/* Bloc Stats à droite */
+.stats-side-container {
+  height: 350px;
+  margin-top: 50px; 
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius:10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.466);
+  padding: 10px;
+  gap: 50px;
+}
+
+/* Ajustement des stats */
+.stats-side-container .stat-block {
+  text-align: center;
+}
+
+.stats-side-container .stat-number {
+  font-size: 28px;
+  font-weight: bold;
+   color: #ff0000;
+}
+
+.stats-side-container .stat-label {
+  font-size: 14px;
+  color: #3b3a3a;
+}
+
+
+@media (max-width: 768px) {
+  .about-stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container, .stats-side-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .stats-side-container {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .stats-side-container .stat-block {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+        .footer-bottom p {
+          margin-top: 20px;
+          text-align: center;
+          margin-bottom: 10px;
+          color: #6c757d;
+}
+       
+        .footer-bottom {
+          margin-top: 110px;
+          /* background-color: #f3f4f6; */
+          border-top: 1px solid #dee2e6;
+          color: #6c757d;
+}
+    
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.75s, transform 1.75s;
+        }
+        .fade-in-section.is-visible {
+            opacity: 50;
+            transform: translateY(0);
+        }
+  </style>
+</head>
+<body>
+    
+
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+        </div>
+
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div class="menu-container">
+          <ul class="nav-links">
+            <a href="#home">Accueil</a>
+            <a href="#prevent">Prévention</a>
+            <a href="#alert">Alerte</a>
+            <a href="inscription.html">Inscription</a>
+          </ul>
+      </div>
+    </nav>
+
+</header>
+    
+        <main >
+          <!-- <section id="home" class="hero fade-in-section"> -->
+            <section class="home">
+              <div class="site_desc">
+                  <div class="left">
+                      <h1>Reyaji Kòmsadwa : Apprendre à Réagir Face aux Séismes.</h1>
+                      <p>Reyaji Kòmsadwa est un système d’alerte sismique conçu pour avertir rapidement 
+                        la population. <br>
+                        Il envoie des notifications instantanées sur les téléphones en cas de tremblement de terre.
+                      </p>
+                  </div>
+    
+                  <div class="right">
+                    <img src="landing page.png" alt="Image landing">
+                </div>
+
+    
+              </div>
+            </section>
+        </main>
+          
+          
+          
+  <section class="process fade-in-section" id="prevent">
+    <div class="container">
+        <h2>Les bons réflexes en cas de tremblement de terre</h2>
+        <div class="process-grid">
+            <a href="avant.html" class="prvt"> 
+              <div class="process-step">
+                <!-- Icône Avant -->
+                <span class="material-icons" style="font-size: 65px; color: #2824f1; margin-bottom: 25px; margin-top: 30px;">event_note</span>
+                <h3 class="process-title">Avant un séisme : <br> Anticipez les risques</h3>                
+                <p class="process-description">Apprenez les bons réflexes et mettez en place les mesures nécessaires pour réduire les dangers avant un séisme.</p>
+            </div>
+            </a> 
+              <a href="avant.html" class="prvt"> 
+            <div class="process-step">
+                <!-- Icône Pendant -->
+                <span class="material-icons" style="font-size: 65px; color: #ff0000; margin-bottom: 25px; margin-top: 30px;">warning</span>
+                <h3 class="process-title">Pendant un séisme : <br> Protégez-vous</h3>
+                <p class="process-description">Adoptez les gestes de protection essentiels pour préserver votre sécurité pendant les secousses sismiques.</p>
+            </div>
+            </a>
+
+            <a href="avant.html" class="prvt"> 
+            <div class="process-step">
+                <!-- Icône Après -->
+                <span class="material-icons" style="font-size: 65px; color: #f57c00; margin-bottom: 25px; margin-top: 30px;">report_problem</span>
+                <h3 class="process-title">Après un séisme : <br>Restez prudent</h3>
+                <p class="process-description">Maintenez un haut niveau de vigilance et agissez prudemment pour éviter les dangers après un séisme.</p>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+        <section class="contact-banner fade-in-section">
+            <div class="container">
+                <h2>Êtes-vous prêt à recevoir des alertes sismiques <br> en temps réel ? </h2>
+                <p>Restez toujours connecté à l’actualité sismique de votre région. 
+                  Notre système d’alerte vous transmet des informations fiables et immédiates pour suivre l’évolution des secousses en temps réel.</p>
+                <a href="contact.html" class="contact-cta">Je m’inscris gratuitement</a>
+            </div>
+        </section>
+
+        <section class="offer-section  fade-in-section" id="alert">
+            <h2>Comprendre le degré de dangerosité des séismes <br> et ses niveaux d’alerte</h2>
+            <p class="offer-subtitle">
+               Cliquez sur les boutons * Voir les détails * pour avoir plus d'informations.
+            </p>
+          
+            <div class="offer-cards">
+              <div class="offer-card">
+                <span class="material-icons" style="font-size: 65px; color: #2824f1; margin-bottom: 25px; margin-top: 30px;">warning</span>
+                <h3 class="offer-title0">Niveau faible</h3>
+                <p class="faible">Magnitude 0 - 3 </p>
+                <p class="description0">Rarement ressentie,<br> presque pas de dégâts</p>
+                <a href="faible.html" class="offer-link">Voir les détails</a>
+              </div>
+
+              <div class="offer-card">
+               <span class="material-icons" style="font-size: 65px; color: #ff7300; margin-bottom: 25px; margin-top: 30px;">warning</span>
+                <h3 class="offer-title1">Niveau modéré</h3>
+                <p class="modéré">Magnitude 3 - 6 </p>
+                <p class="description1">Secousses ressenties,<br> peu de dégâts</p>
+                <a href="modere.html" class="offer-link">Voir les détails</a>
+              </div>
+          
+              <div class="offer-card">
+               <span class="material-icons" style="font-size: 65px;align-items: center; color: #ff0000; margin-bottom: 25px; margin-top: 30px;">warning</span>
+                <h3 class="offer-title2">Niveau élevé</h3>
+                 <p class="élevé">Magnitude 6 - 9 </p>
+                <p class="description2">Dégâts matériels possibles,<br> soyez vigilants</p>
+                <a href="fort.html" class="offer-link">Voir les détails</a>
+              </div>
+          
+              <div class="offer-card">
+               <span class="material-icons" style="font-size: 65px; text-align: center; color: #000000; margin-bottom: 25px; margin-top: 30px;">warning</span>
+                <h3 class="offer-title3">Niveau extrême</h3>
+                <p class="extrême">Magnitude 9 + </p>
+                <p class="description3">Danger extrême,<br> évacuations possibles</p>
+                <a href="extreme.html" class="offer-link">Voir les détails</a>
+              </div>
+            </div>
+          </section>
+          
+        <section class="about-wrapper  fade-in-section">
+            <div class="about-stats-container">
+              <!-- Bloc About Us (réduit et poussé à gauche) -->
+              <div class="about-container">
+                <div class="about-text">
+                  <h2>À propos de nous</h2>
+                  <p>
+                  Reyaji Kòmsadwa est un système d’alerte sismique 
+                  conçu pour sensibiliser les populations
+                  face aux tremblements de terre.
+                  Grâce à des capteurs et des technologies avancées,
+                  il détecte les secousses en temps réel et envoie immédiatement
+                  des notifications d’alerte sur les téléphones.
+                  Au-delà de la technologie, notre objectif est d’apporter
+                  des solutions concrètes pour améliorer la sécurité en Haïti.
+                  Nous croyons qu’avec de la prévention et des outils adaptés,
+                  il est possible de changer la situation actuelle 
+                  et de construire un avenir plus sûr pour notre pays.
+                  </p>
+                </div>
+                <!-- <div class="about-image">
+                  <img src="" alt="product in hand" />
+                </div> -->
+              </div>
+          
+              <!-- Bloc Stats à droite -->
+              <div class="stats-side-container">
+                <div class="stat-block">
+                    <p class="stat-number" data-target="5000">0</p>
+                    <p class="stat-label">Clients <br> depuis <br> mai 2025</p>
+                  </div>
+                  <div class="stat-block">
+                    <p class="stat-number" data-target="50">0</p>
+                    <p class="stat-label">Alertes <br> depuis <br> mai 2025</p>
+                  </div>                  
+              </div>
+            </div>
+          </section>
+
+          <div class="footer-bottom">
+           <p>&copy 2025 CodeGeniuses & Co. Tous droits réservés.</p>
+          </div>
+          
+          <script>
+          const statSection = document.querySelector('.stats-side-container');
+const statNumbers = document.querySelectorAll('.stat-number');
+
+let hasAnimated = false;
+
+function animateCount(el, target) {
+  let current = 0;
+  const increment = target / 250; // durée : ~5s
+
+  const counter = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      el.textContent = target.toLocaleString() + "+";
+      clearInterval(counter);
+    } else {
+      el.textContent = Math.floor(current).toLocaleString() + "+";
+    }
+  }, 20);
+}
+
+function resetCounts() {
+  statNumbers.forEach(el => el.textContent = '0');
+  hasAnimated = false;
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !hasAnimated) {
+      statNumbers.forEach(el => {
+        const target = parseInt(el.getAttribute('data-target'));
+        animateCount(el, target);
+      });
+      hasAnimated = true;
+    } else if (!entry.isIntersecting) {
+      resetCounts();
+    }
+  });
+}, { threshold: 0.5 });
+
+observer.observe(statSection);
+
+// -----------------------------
+// FADE-IN SECTIONS & OFFER CARDS
+// -----------------------------
+
+function handleScrollAnimation() {
+  const fadeElements = document.querySelectorAll('.fade-in-section, .offer-card');
+  fadeElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementBottom = element.getBoundingClientRect().bottom;
+    const windowHeight = window.innerHeight;
+    if (elementTop < windowHeight * 0.75 && elementBottom > 0) {
+      element.classList.add('is-visible');
+    } else {
+      element.classList.remove('is-visible');
+    }
+  });
+}
+
+// Initial call to handle animations
+handleScrollAnimation();
+
+window.addEventListener('scroll', handleScrollAnimation);
+
+
+</script>
+          
+
+<script>
+  const burger = document.querySelector('.burger');
+  const menuContainer = document.querySelector('.menu-container');
+
+  burger.addEventListener('click', () => {
+      menuContainer.classList.toggle('active');
+  });
+
+  // Optionnel : Cliquez en dehors pour fermer le menu
+  document.addEventListener('click', (event) => {
+      if (!menuContainer.contains(event.target) && !burger.contains(event.target)) {
+          menuContainer.classList.remove('active');
+      }
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.body.classList.add("active");
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Se préparer à un séisme</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaecee;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 120px auto 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 900px;
+            width: 100%;
+            background-color: #f3efe19f;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:  #2824f1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color:  #2824f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline rgb(0, 0, 0);
+            color: #000000;
+        }
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            color: #000000;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #fffffff5;
+                flex-direction: column;
+                width: 150px;
+                padding: 20px;
+                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+                       .burger {
+                display: flex;
+                color: #000000;
+            }
+            .burger div {         
+            background-color: rgb(0, 0, 0);
+        }
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color:  #2824f1;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-divider {
+            border-top: 2px solid #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .conclusion {
+            background-color:  #2724f11f;
+            padding: 20px;
+            border-left: 5px solid  #2824f1;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .footer-bottom p {
+          margin-top: 20px;
+          text-align: center;
+          margin-bottom: 10px;
+          color: #6c757d;
+}
+       
+        .footer-bottom {
+          margin-top: 110px;
+          /* background-color: #f3f4f6; */
+          border-top: 1px solid #dee2e6;
+          color: #6c757d;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="logo">SéismeInfo</div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#prevent">Prévention</a>
+                <a href="index.html#alert">Alertes</a>
+                <a href="#">Inscriptions</a>
+            </div>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Comment bien se préparer à un séisme ?</h1>
+
+        <h2></h2>
+        <p>Un séisme peut survenir à tout moment, sans prévenir. Ses conséquences peuvent être dramatiques si l'on n'est pas préparé : effondrements, blessures, coupures d’électricité, incendies, ou encore risques de tsunami dans les zones côtières. Pourtant, il est possible de réduire considérablement les risques en adoptant des mesures simples mais efficaces en amont. Se préparer, c'est protéger sa vie, celle de ses proches et limiter les dégâts.</p>
+        <p>Voici les étapes essentielles pour bien vous préparer à affronter un séisme.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>1. Informez-vous sur les risques sismiques de votre région</h2>
+        <p>Avant toute chose, il est crucial de savoir si vous vivez dans une zone à risque. Consultez les <strong>cartes sismiques officielles</strong> disponibles sur les sites gouvernementaux ou auprès des collectivités locales. Ces documents indiquent le niveau d'exposition de votre région aux tremblements de terre.</p>
+        <p>Les <strong>autorités locales</strong> (préfectures, mairies) proposent souvent des brochures et des campagnes d’information sur les risques naturels et les comportements à adopter. En vous tenant informé, vous serez mieux armé pour anticiper les dangers.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>2. Connaissez les plans d’urgence et d’évacuation</h2>
+        <p>En cas de séisme, la panique est un danger en soi. Pour éviter la confusion, renseignez-vous à l'avance sur les <strong>plans d’évacuation</strong> mis en place par votre commune :</p>
+        <ul>
+            <li>Où se trouvent les <strong>lieux de rassemblement sécurisés</strong> ?</li>
+            <li>Quels sont les <strong>itinéraires d’évacuation prioritaires</strong> ?</li>
+            <li>Quelles sont les <strong>consignes de confinement</strong> en cas d’impossibilité de sortir ?</li>
+        </ul>
+        <p>Connaître ces informations vous permettra de réagir vite et efficacement le moment venu.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>3. Évaluez la solidité de votre logement</h2>
+        <p>Votre maison ou votre immeuble a-t-il été construit en respectant les <strong>normes parasismiques</strong> ? Cette question est capitale.</p>
+        <p>Faites appel à un <strong>expert en géologie ou à un ingénieur en bâtiment</strong> pour évaluer la stabilité de votre habitation, surtout si celle-ci est ancienne ou construite avant les réglementations actuelles.</p>
+        <p>En fonction des résultats, des <strong>travaux de renforcement</strong> (renforts structurels, fixation des éléments lourds, amélioration des fondations) pourront être envisagés pour sécuriser durablement votre logement.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>4. Repérez les zones refuges à l’intérieur de votre domicile</h2>
+        <p>Lors d’un séisme, certaines zones de votre maison offrent une meilleure protection que d’autres. Identifiez en amont les <strong>endroits sûrs</strong> où vous pourrez vous abriter :</p>
+        <ul>
+            <li>Sous une <strong>table solide</strong> ou un <strong>meuble résistant</strong>.</li>
+            <li>Loin des <strong>fenêtres</strong>, <strong>murs fragiles</strong> ou <strong>étagères chargées</strong> qui risquent de s’effondrer.</li>
+        </ul>
+        <p>Faire cet exercice en famille permettra à chacun de savoir instinctivement où se réfugier en cas de secousse.</p>
+
+        <div class="section-divider"></div>
+
+        <h2>5. Réalisez un diagnostic de vulnérabilité de votre bâtiment</h2>
+        <p>Le <strong>diagnostic de vulnérabilité</strong> est une évaluation technique permettant d’identifier les faiblesses de votre habitation face aux secousses sismiques.</p>
+        <p>Il prend en compte :</p>
+        <ul>
+            <li>La qualité des matériaux.</li>
+            <li>L’état des structures (murs, poutres, charpente).</li>
+            <li>Les risques d’effondrement partiel ou total.</li>
+        </ul>
+        <p>Ce diagnostic est une <strong>étape clé</strong> pour prévenir les risques et garantir la sécurité des occupants. Il peut être réalisé par des bureaux d’études spécialisés.</p>
+
+        <div class="conclusion">
+            <h2></h2>
+            <p>Se préparer à un séisme, c’est bien plus qu’une simple précaution : c’est une responsabilité. En vous informant, en adaptant votre habitat et en connaissant les bons gestes, vous augmentez vos chances de traverser un tel événement sans blessure ni panique.</p>
+            <p>Anticiper, c’est aussi protéger vos proches et contribuer à la sécurité collective. <strong>Rappelez-vous : une bonne préparation peut sauver des vies.</strong></p>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom">
+           <p>&copy 2025 CodeGeniuses & Co. Tous droits réservés.</p>
+          </div>
+
+
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

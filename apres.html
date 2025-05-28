@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Après un séisme : Restez prudent et vigilant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaecee;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 120px auto 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-wrapper {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 900px;
+            width: 100%;
+            background-color: #f3efe19f;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:#f57c00;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color:#f57c00;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline rgb(0, 0, 0);
+            color: #000000;
+        }
+
+
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            color: black;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #2c3e50;
+                flex-direction: column;
+                width: 200px;
+                padding: 20px;
+                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+                        .burger {
+                display: flex;
+                color: #000000;
+            }
+            .burger div {         
+            background-color: rgb(0, 0, 0);
+        }
+        }
+
+        h1 {
+            color:#000000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #f57c00;
+            margin-top: 30px;
+        }
+
+        h3 {
+            margin-top: 25px;
+            color: #f57c00;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .conclusion {
+            background-color: #ff00001a;
+            padding: 20px;
+            border-left: 5px solid #f57c00;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .separator {
+            margin: 30px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .footer-bottom p {
+          margin-top: 20px;
+          text-align: center;
+          margin-bottom: 10px;
+          color: #6c757d;
+}
+       
+        .footer-bottom {
+          margin-top: 110px;
+          /* background-color: #f3f4f6; */
+          border-top: 1px solid #dee2e6;
+          color: #6c757d;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar-wrapper">
+        <nav class="navbar">
+            <div class="logo">SéismeInfo</div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#prevent">Prévention</a>
+                <a href="index.html#alert">Alertes</a>
+                <a href="#">Inscriptions</a>
+            </div>
+            <div class="burger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Après un séisme : Restez prudent et vigilant</h1>
+
+        <h2></h2>
+        <p>Quand les secousses cessent, le danger n'est pas forcément écarté. Les instants qui suivent un séisme sont critiques : répliques, effondrements, incendies ou tsunamis peuvent encore menacer votre sécurité. Savoir comment réagir permet d’éviter les pièges de l’après-séisme et d’apporter une aide précieuse aux autres.</p>
+        <p>Voici les gestes essentiels à adopter après un tremblement de terre.</p>
+
+        <div class="separator"></div>
+
+        <h3>1. Vérifiez l’état de santé autour de vous et portez assistance</h3>
+        <ul>
+            <li>Examinez votre état et celui des personnes proches : blessures, chocs, pertes de conscience.</li>
+            <!-- <li>Administrez les premiers secours si vous en avez la capacité.</li> -->
+            <li>Évitez de déplacer les blessés graves, sauf en cas de danger immédiat.</li>
+            <li>Appelez les secours uniquement si nécessaire pour éviter d’encombrer les lignes d'urgence.</li>
+        </ul>
+
+         <div class="separator"></div>
+
+        <h3>2. Évacuez prudemment le bâtiment</h3>
+        <ul>
+            <li>Ne prenez jamais l’ascenseur après un séisme.</li>
+            <li>Inspectez la solidité des escaliers avant de les utiliser.</li>
+            <li>Sortez calmement et rejoignez les zones de rassemblement prévues par le plan d'évacuation.</li>
+            <li>Évitez de rester à proximité des bâtiments endommagés.</li>
+        </ul>
+
+         <div class="separator"></div>
+
+        <h3>3. Coupez les sources de danger domestique</h3>
+        <ul>
+            <li>Fermez immédiatement le gaz pour éviter les explosions en cas de fuite.</li>
+            <li>Coupez l’électricité si vous sentez une odeur suspecte ou voyez des câbles endommagés.</li>
+            <li>Fermez l’arrivée d’eau si des dégâts sur les canalisations sont visibles.</li>
+        </ul>
+
+         <div class="separator"></div>
+
+        <h3>4. Éloignez-vous des côtes en cas d’alerte tsunami</h3>
+        <ul>
+            <li>Si vous êtes dans une zone côtière, rejoignez rapidement les hauteurs.</li>
+            <li>Ne retournez pas en bord de mer tant qu’aucune levée d’alerte officielle n’est donnée.</li>
+            <li>Restez attentif aux sirènes et consignes de sécurité émises par les autorités locales.</li>
+        </ul>
+
+         <div class="separator"></div>
+
+        <h3>5. Utilisez les communications avec parcimonie</h3>
+        <ul>
+            <li>Limitez vos appels téléphoniques aux urgences vitales.</li>
+            <li>Privilégiez les SMS ou applications de messagerie pour rassurer vos proches.</li>
+            <li>Laissez les réseaux libres pour les secours et les gestionnaires de crise.</li>
+        </ul>
+
+         <div class="separator"></div>
+
+        <h3>6. Informez-vous et suivez les directives officielles</h3>
+        <ul>
+            <li>Écoutez la radio, les informations locales ou les applications d’alerte pour connaître les consignes.</li>
+            <li>Suivez scrupuleusement les instructions des forces de l’ordre et des secours.</li>
+            <li>Ne diffusez pas de rumeurs : vérifiez toujours vos sources avant de partager des informations.</li>
+        </ul>
+
+
+        <div class="conclusion">
+            <h2></h2>
+            <p>Un séisme ne s’arrête pas au moment des secousses. Les répliques, les dégâts cachés et les risques secondaires imposent de rester vigilant et méthodique. En appliquant ces gestes de sécurité et en coopérant avec les secours, vous protégez votre vie et celle de votre entourage.</p>
+            <p>Chaque action réfléchie compte pour réduire les risques et faciliter le retour à la sécurité. Anticipation et sang-froid sont vos meilleurs alliés, même après la catastrophe.</p>
+        </div>
+    </div>
+
+
+
+    <div class="footer-bottom">
+           <p>&copy 2025 CodeGeniuses & Co. Tous droits réservés.</p>
+          </div>
+
+
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
