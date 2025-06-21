@@ -1,263 +1,39 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pendant un séisme : Protégez-vous efficacement</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #eaecee;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+<h1>Que faire pendant un séisme ?</h1>
 
-        .container {
-            max-width: 900px;
-            margin: 120px auto 50px auto;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+<p>Un séisme peut se produire brusquement et provoquer de violentes secousses. Dans ces moments critiques, adopter les bons réflexes est essentiel pour préserver sa vie et celle des autres. Le calme, la rapidité d’action et la connaissance des gestes de protection peuvent faire toute la différence.</p>
+<p>Voici les mesures à suivre au moment exact où le tremblement de terre se déclenche.</p>
 
-        .navbar-wrapper {
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            top: 20px;
-            width: 100%;
-            background: transparent;
-            z-index: 1000;
-        }
+<div class="section-divider"></div>
 
+<h2>1. Protégez-vous immédiatement</h2>
+<p>Dès les premières secousses, ne perdez pas de temps :</p>
+<ul>
+    <li>Abritez-vous sous une <strong>table solide</strong> ou un <strong>meuble robuste</strong> pour vous protéger des chutes d’objets.</li>
+    <li>Si rien n’est à proximité, accroupissez-vous contre un mur intérieur, loin des fenêtres.</li>
+    <li>Protégez votre <strong>tête et votre cou</strong> avec vos bras ou un objet (sac, coussin, etc.).</li>
+</ul>
 
-        .navbar {
-            max-width: 900px;
-            width: 100%;
-            background-color: #f3efe19f;
-            padding: 15px 30px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
-        }
+<div class="section-divider"></div>
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #ff0000; 
-        }
+<h2>2. Ne vous déplacez pas pendant les secousses</h2>
+<p>Restez là où vous êtes jusqu’à la fin du séisme :</p>
+<ul>
+    <li>À l’intérieur ? <strong>Ne sortez pas</strong>, vous risqueriez d’être blessé par des débris.</li>
+    <li>À l’extérieur ? <strong>Éloignez-vous des bâtiments</strong>, poteaux électriques et arbres.</li>
+    <li>Dans un véhicule ? Arrêtez-vous sur le bas-côté, loin des ponts, tunnels ou lignes électriques, et restez à l’intérieur.</li>
+</ul>
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
+<div class="section-divider"></div>
 
-        .nav-links a {
-            color: #ff0000; 
-            text-decoration: none;
-            font-weight: 500;
-        }
+<h2>3. Gardez votre calme et rassurez les autres</h2>
+<p>Panique et mouvements brusques augmentent les risques de blessure. Essayez de :</p>
+<ul>
+    <li>Rester <strong>calme</strong> et de <strong>respirer profondément</strong>.</li>
+    <li><strong>Rassurer les personnes autour de vous</strong>, surtout les enfants ou les personnes âgées.</li>
+    <li>Éviter de crier ou de courir, cela pourrait aggraver la confusion.</li>
+</ul>
 
-         .nav-links a:hover {
-            text-decoration: underline rgb(0, 0, 0);
-            color: #000000;
-        }
-
-        .burger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: black;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 60px;
-                right: 30px;
-                background-color: #2c3e50;
-                flex-direction: column;
-                width: 200px;
-                padding: 20px;
-                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
-                border-radius: 10px;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-                        .burger {
-                display: flex;
-                color: #000000;
-            }
-            .burger div {         
-            background-color: rgb(0, 0, 0);
-        }
-        }
-
-        h1 {
-            color: #000000; 
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #ff0000;
-            margin-top: 30px;
-        }
-
-        h3 {
-            margin-top: 25px;
-            color: #ff0000; 
-        }
-
-        p {
-            line-height: 1.6;
-            color: #000000;
-            margin-bottom: 15px;
-        }
-
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        .conclusion {
-            background-color: #ff00001a;
-            padding: 20px;
-            border-left: 5px solid #ff0000;
-            margin-top: 40px;
-            border-radius: 5px;
-        }
-
-        .separator {
-            margin: 30px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-
-        .footer-bottom p {
-          margin-top: 20px;
-          text-align: center;
-          margin-bottom: 10px;
-          color: #6c757d;
-}
-       
-        .footer-bottom {
-          margin-top: 110px;
-          /* background-color: #f3f4f6; */
-          border-top: 1px solid #dee2e6;
-          color: #6c757d;
-}
-
-    </style>
-</head>
-<body>
-
-    <div class="navbar-wrapper">
-        <nav class="navbar">
-            <div class="logo">SéismeInfo</div>
-           <div class="nav-links" id="navLinks">
-                <a href="index.html">Accueil</a>
-                <a href="index.html#prevent">Prévention</a>
-                <a href="index.html#alert">Alertes</a>
-                <a href="#">Inscriptions</a>
-            </div>
-            <div class="burger" onclick="toggleMenu()">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </nav>
-    </div>
-
-    <div class="container">
-        <h1>Pendant un séisme : Protégez-vous efficacement</h1>
-
-        <h2></h2>
-        <p>Un séisme survient brutalement, sans prévenir. Dans ces instants critiques, la manière dont vous réagissez peut faire toute la différence. La panique est votre pire ennemie : elle paralyse l’action et accroît les risques de blessures. À l’inverse, connaître les bons gestes et rester concentré permet de protéger efficacement sa vie et celle des autres.</p>
-        <p>Voici les réflexes essentiels à adopter au moment où la terre tremble.</p>
-
-        <div class="separator"></div>
-
-        <h3>1. Gardez votre calme et évaluez rapidement la situation</h3>
-        <p>Face à un séisme, la maîtrise de soi est vitale. Même si la peur est naturelle, il est essentiel de :</p>
-        <ul>
-            <li>Respirer profondément pour éviter la panique.</li>
-            <li>Analyser votre environnement en un instant : êtes-vous à l’intérieur, à l’extérieur, dans un véhicule ?</li>
-            <li>Réagir selon la situation, sans précipitation, mais avec rapidité.</li>
-        </ul>
-        <p>Un esprit lucide vous permettra de prendre les bonnes décisions sous pression.</p>
-
-         <div class="separator"></div>
-
-        <h3>2. Cherchez immédiatement un abri sécurisé à l’intérieur</h3>
-        <p>Si vous êtes à l’intérieur d’un bâtiment :</p>
-        <ul>
-            <li>Éloignez-vous des fenêtres, des baies vitrées et des cloisons légères, car elles peuvent se briser ou s’effondrer.</li>
-            <li>Évitez les étagères chargées, armoires, luminaires suspendus et tout objet risquant de tomber.</li>
-            <li>Mettez-vous à l’abri sous une table solide ou un meuble robuste.</li>
-            <li>En l'absence d'abri, accroupissez-vous près d’un mur porteur en protégeant votre tête avec vos bras.</li>
-        </ul>
-        <p>Important : ne courez pas vers les sorties pendant les secousses, le risque d’accident est trop élevé.</p>
-
-         <div class="separator"></div>
-
-        <h3>3. À l’extérieur : mettez-vous à l’écart de tout danger de chute</h3>
-        <ul>
-            <li>Éloignez-vous immédiatement des bâtiments, façades, balcons et murs susceptibles de s’effondrer.</li>
-            <li>Fuyez les poteaux électriques, lampadaires, arbres et tout élément pouvant basculer.</li>
-            <li>Rejoignez un espace dégagé et protégez votre tête en attendant la fin des secousses.</li>
-        </ul>
-
-         <div class="separator"></div>
-
-        <h3>4. En voiture : stoppez prudemment dans un lieu sûr</h3>
-        <ul>
-            <li>Ralentissez progressivement et arrêtez-vous loin des ponts, tunnels, bâtiments et lignes électriques.</li>
-            <li>Ne sortez pas de votre véhicule pendant les secousses.</li>
-            <li>Allumez vos feux de détresse pour signaler votre présence.</li>
-            <li>Après les secousses, évaluez si la route est praticable avant de repartir.</li>
-        </ul>
-
-         <div class="separator"></div>
-
-        <h3>5. Restez vigilant face aux répliques sismiques</h3>
-        <ul>
-            <li>Ne relâchez pas votre vigilance : des répliques peuvent survenir à tout moment.</li>
-            <li>Vérifiez les risques d’incendies, fuites de gaz ou chutes d’objets supplémentaires.</li>
-            <li>Évitez d’emprunter des escaliers ou ascenseurs jusqu'à vérification de leur sécurité.</li>
-            <li>Suivez les instructions des autorités locales et des services de secours.</li>
-        </ul>
-
-        <div class="conclusion">
-            <h2></h2>
-            <p>Pendant un séisme, chaque seconde compte. Vos réactions doivent être rapides mais réfléchies. Garder votre calme, adopter les gestes de protection adaptés et éviter les comportements à risque sont des réflexes qui peuvent sauver des vies.</p>
-            <p>Entraînez-vous mentalement à ces scénarios pour être prêt le jour où cela arrivera. La préparation et la lucidité sont vos meilleures armes face à un séisme.</p>
-        </div>
-    </div>
-
-
-    <div class="footer-bottom">
-           <p>&copy 2025 CodeGeniuses & Co. Tous droits réservés.</p>
-          </div>
-
-
-    <script>
-        function toggleMenu() {
-            const nav = document.getElementById('navLinks');
-            nav.classList.toggle('active');
-        }
-    </script>
-</body>
-</html>
+<div class="conclusion">
+    <p>La période pendant un séisme est brève, mais déterminante. En restant lucide et en appliquant les gestes de protection, vous augmentez significativement vos chances d’en sortir indemne.</p>
+    <p><strong>Gardez toujours à l’esprit que se protéger en quelques secondes peut sauver une vie.</strong></p>
+</div>
