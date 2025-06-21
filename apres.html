@@ -1,39 +1,196 @@
-<h1>Que faire après un séisme ?</h1>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Après un séisme : Restez prudent</title>
+    <style>
+        /* >>> LE CSS QUE TU AS DONNÉ <<< */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eaecee;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
 
-<p>Une fois les secousses passées, le danger n’est pas totalement écarté. Effondrements secondaires, fuites de gaz, incendies ou répliques peuvent encore survenir. Il est donc important d’agir avec prudence, méthode et vigilance dans les minutes et heures qui suivent un tremblement de terre.</p>
-<p>Voici les étapes à suivre pour rester en sécurité après un séisme.</p>
+        .container {
+            max-width: 900px;
+            margin: 120px auto 50px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
-<div class="section-divider"></div>
+        .navbar-wrapper {
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 20px;
+            width: 100%;
+            background: transparent;
+            z-index: 1000;
+        }
 
-<h2>1. Vérifiez votre état et celui des autres</h2>
-<p>Avant toute chose, prenez quelques instants pour :</p>
-<ul>
-    <li>Évaluer si vous êtes blessé(e) et administrer les premiers soins si nécessaire.</li>
-    <li>Vérifier l’état des personnes proches : famille, voisins, collègues.</li>
-    <li>Appeler les secours si des blessés sont graves, mais n’encombrez pas les lignes inutiles.</li>
-</ul>
+        .navbar {
+            max-width: 900px;
+            width: 100%;
+            background-color: #f3efe19f;
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
+        }
 
-<div class="section-divider"></div>
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color:  #2824f1;
+        }
 
-<h2>2. Quittez le bâtiment si nécessaire</h2>
-<p>Après un séisme, votre logement ou lieu de travail peut être fragilisé :</p>
-<ul>
-    <li>Si vous sentez une forte odeur de <strong>gaz</strong> ou voyez des <strong>fils électriques exposés</strong>, évacuez immédiatement.</li>
-    <li>Ne prenez pas l’<strong>ascenseur</strong>, utilisez les escaliers.</li>
-    <li>Rendez-vous dans un <strong>lieu de rassemblement sécurisé</strong> en suivant les consignes des autorités.</li>
-</ul>
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
 
-<div class="section-divider"></div>
+        .nav-links a {
+            color:  #2824f1;
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-<h2>3. Restez informé(e) et prudent(e)</h2>
-<p>Après le séisme, le calme apparent peut cacher des dangers persistants :</p>
-<ul>
-    <li>Écoutez les <strong>consignes officielles</strong> à la radio ou via les applications d’alerte.</li>
-    <li>Évitez d’utiliser le téléphone sauf en cas d’urgence.</li>
-    <li>Restez à l’écart des bâtiments endommagés et ne rentrez chez vous que lorsque les autorités le permettent.</li>
-</ul>
+        .nav-links a:hover {
+            text-decoration: underline rgb(0, 0, 0);
+            color: #000000;
+        }
 
-<div class="conclusion">
-    <p>Un séisme ne se termine pas lorsque les secousses cessent. Les heures qui suivent sont tout aussi importantes pour assurer votre sécurité et celle de votre entourage.</p>
-    <p><strong>Restez vigilant, aidez ceux qui en ont besoin, et attendez les instructions des secours avant toute décision.</strong></p>
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            color: #000000;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #fffffff5;
+                flex-direction: column;
+                width: 150px;
+                padding: 20px;
+                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+                border-radius: 10px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+                color: #000000;
+            }
+            .burger div {         
+                background-color: rgb(0, 0, 0);
+            }
+        }
+
+        h1 {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color:  #2824f1;
+            margin-top: 30px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-divider {
+            border-top: 2px solid #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .conclusion {
+            background-color:  #2724f11f;
+            padding: 20px;
+            border-left: 5px solid  #2824f1;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+
+        .footer-bottom p {
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
+
+        .footer-bottom {
+            margin-top: 110px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar-wrapper">
+    <nav class="navbar">
+        <div class="logo">SéismeInfo</div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Accueil</a>
+            <a href="index.html#prevent">Prévention</a>
+            <a href="index.html#alert">Alertes</a>
+            <a href="#">Inscriptions</a>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
 </div>
+
+<div class="container">
+    <h1>Après un séisme : Restez prudent</h1>
+
+    <p>Un séisme peut avoir des conséquences durables. Même si les secousses ont cessé, les dangers restent présents : répliques, bâtiments fragilisés, fuites de gaz ou incendies. Il est essentiel d’agir avec méthode et prudence dans les heures qui suivent.</p>
+
+    <div class="section-divider"></div>
+
+    <h2>1. Vérifiez votre état et celui de vos proches</h2>
+    <ul>
+        <li>Examinez si vous êtes blessé(e) et prodiguez les premiers soins si besoin.</li>
+        <li>Vérifiez l’état des personnes autour de vous et rassurez-les.</li>
+        <li>Contactez les secours si des personnes sont grièvement blessées.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>2. Évacuez si nécessaire</h2>
+    <ul>
