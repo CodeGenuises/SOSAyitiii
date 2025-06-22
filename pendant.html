@@ -1,236 +1,246 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Après un séisme : Restez prudent</title>
-    <style>
-        /* >>> LE CSS QUE TU AS DONNÉ <<< */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #eaecee;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pendant un séisme : Protégez-vous</title>
+  <style>
+    /* >>> LE MÊME CSS QUE APRES.HTML <<< */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #eaecee;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 120px auto 50px auto;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+    .container {
+      max-width: 900px;
+      margin: 120px auto 50px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
-        .navbar-wrapper {
-            display: flex;
-            justify-content: center;
-            position: fixed;
-            top: 20px;
-            width: 100%;
-            background: transparent;
-            z-index: 1000;
-        }
+    .navbar-wrapper {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      top: 20px;
+      width: 100%;
+      background: transparent;
+      z-index: 1000;
+    }
 
-        .navbar {
-            max-width: 900px;
-            width: 100%;
-            background-color: #f3efe19f;
-            padding: 15px 30px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
-        }
+    .navbar {
+      max-width: 900px;
+      width: 100%;
+      background-color: #f3efe19f;
+      padding: 15px 30px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 15px 18px rgba(0, 0, 0, 0.466);
+    }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color:  #2824f1;
-        }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2824f1;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
 
-        .nav-links a {
-            color:  #2824f1;
-            text-decoration: none;
-            font-weight: 500;
-        }
+    .nav-links a {
+      color: #2824f1;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        .nav-links a:hover {
-            text-decoration: underline rgb(0, 0, 0);
-            color: #000000;
-        }
+    .nav-links a:hover {
+      text-decoration: underline rgb(0, 0, 0);
+      color: #000000;
+    }
 
-        .burger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            color: #000000;
-            gap: 5px;
-        }
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      color: #000000;
+      gap: 5px;
+    }
 
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: rgb(0, 0, 0);
-        }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: rgb(0, 0, 0);
+    }
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 60px;
-                right: 30px;
-                background-color: #fffffff5;
-                flex-direction: column;
-                width: 150px;
-                padding: 20px;
-                box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
-                border-radius: 10px;
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            .burger {
-                display: flex;
-                color: #000000;
-            }
-            .burger div {         
-                background-color: rgb(0, 0, 0);
-            }
-        }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        background-color: #fffffff5;
+        flex-direction: column;
+        width: 150px;
+        padding: 20px;
+        box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+        border-radius: 10px;
+      }
 
-        h1 {
-            color: #000000;
-            text-align: center;
-            margin-bottom: 30px;
-        }
+      .nav-links.active {
+        display: flex;
+      }
 
-        h2 {
-            color:  #2824f1;
-            margin-top: 30px;
-        }
+      .burger {
+        display: flex;
+        color: #000000;
+      }
 
-        p {
-            line-height: 1.6;
-            color: #000000;
-            margin-bottom: 15px;
-        }
+      .burger div {
+        background-color: rgb(0, 0, 0);
+      }
+    }
 
-        ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-bottom: 20px;
-        }
+    h1 {
+      color: #000000;
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        .section-divider {
-            border-top: 2px solid #e0e0e0;
-            margin: 30px 0;
-        }
+    h2 {
+      color: #2824f1;
+      margin-top: 30px;
+    }
 
-        .conclusion {
-            background-color:  #2724f11f;
-            padding: 20px;
-            border-left: 5px solid  #2824f1;
-            margin-top: 40px;
-            border-radius: 5px;
-        }
+    p {
+      line-height: 1.6;
+      color: #000000;
+      margin-bottom: 15px;
+    }
 
-        .footer-bottom p {
-            margin-top: 20px;
-            text-align: center;
-            margin-bottom: 10px;
-            color: #6c757d;
-        }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
 
-        .footer-bottom {
-            margin-top: 110px;
-            border-top: 1px solid #dee2e6;
-            color: #6c757d;
-        }
-    </style>
+    .section-divider {
+      border-top: 2px solid #e0e0e0;
+      margin: 30px 0;
+    }
+
+    .conclusion {
+      background-color: #2724f11f;
+      padding: 20px;
+      border-left: 5px solid #2824f1;
+      margin-top: 40px;
+      border-radius: 5px;
+    }
+
+    .footer-bottom p {
+      margin-top: 20px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #6c757d;
+    }
+
+    .footer-bottom {
+      margin-top: 110px;
+      border-top: 1px solid #dee2e6;
+      color: #6c757d;
+    }
+  </style>
 </head>
 <body>
 
 <div class="navbar-wrapper">
-    <nav class="navbar">
-        <div class="logo">SéismeInfo</div>
-        <div class="nav-links" id="navLinks">
-            <a href="index.html">Accueil</a>
-            <a href="index.html#prevent">Prévention</a>
-            <a href="index.html#alert">Alertes</a>
-            <a href="#">Inscriptions</a>
-        </div>
-        <div class="burger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">SéismeInfo</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#prevent">Prévention</a>
+      <a href="index.html#alert">Alertes</a>
+      <a href="#">Inscriptions</a>
+    </div>
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
 </div>
 
 <div class="container">
-    <h1>Après un séisme : Restez prudent</h1>
+  <h1>Pendant un séisme : Protégez-vous</h1>
 
-    <p>Un séisme peut avoir des conséquences durables. Même si les secousses ont cessé, les dangers restent présents : répliques, bâtiments fragilisés, fuites de gaz ou incendies. Il est essentiel d’agir avec méthode et prudence dans les heures qui suivent.</p>
+  <p>Quand la terre tremble, chaque seconde compte. Il est vital de connaître les bons gestes à adopter pour préserver votre sécurité et celle des autres. Voici les actions essentielles à effectuer pendant un séisme.</p>
 
-    <div class="section-divider"></div>
+  <div class="section-divider"></div>
 
-    <h2>1. Vérifiez votre état et celui de vos proches</h2>
-    <ul>
-        <li>Examinez si vous êtes blessé(e) et prodiguez les premiers soins si besoin.</li>
-        <li>Vérifiez l’état des personnes autour de vous et rassurez-les.</li>
-        <li>Contactez les secours si des personnes sont grièvement blessées.</li>
-    </ul>
+  <h2>1. Restez calme et concentrez-vous</h2>
+  <ul>
+    <li>Ne paniquez pas : respirez profondément et restez lucide.</li>
+    <li>Évaluez votre environnement pour prendre les bonnes décisions rapidement.</li>
+  </ul>
 
-    <div class="section-divider"></div>
+  <div class="section-divider"></div>
 
-    <h2>2. Évacuez si nécessaire</h2>
-    <ul>
-        <li>Si votre bâtiment est endommagé, évacuez calmement par les escaliers.</li>
-        <li>Ne prenez jamais l’ascenseur après un séisme.</li>
-        <li>Dirigez-vous vers les points de rassemblement indiqués par les autorités.</li>
-    </ul>
+  <h2>2. Si vous êtes à l'intérieur</h2>
+  <ul>
+    <li>Mettez-vous sous une table ou un bureau solide.</li>
+    <li>Évitez les fenêtres, miroirs, étagères ou objets suspendus.</li>
+    <li>Protégez votre tête avec vos bras si vous n'avez pas d'abri solide.</li>
+    <li>Ne courez pas dehors tant que les secousses ne sont pas terminées.</li>
+  </ul>
 
-    <div class="section-divider"></div>
+  <div class="section-divider"></div>
 
-    <h2>3. Restez vigilant et informé</h2>
-    <ul>
-        <li>Restez à l’écoute des alertes officielles (radio, application mobile, autorités locales).</li>
-        <li>N’entrez pas dans les bâtiments endommagés sans autorisation.</li>
-        <li>Coupez le gaz et l’électricité si vous détectez une fuite ou une odeur suspecte.</li>
-    </ul>
+  <h2>3. Si vous êtes à l'extérieur</h2>
+  <ul>
+    <li>Éloignez-vous des bâtiments, arbres, poteaux et fils électriques.</li>
+    <li>Dirigez-vous vers un espace ouvert et sécuritaire.</li>
+  </ul>
 
-    <div class="section-divider"></div>
+  <div class="section-divider"></div>
 
-    <h2>4. Attention aux répliques</h2>
-    <ul>
-        <li>Des répliques peuvent survenir dans les minutes ou heures qui suivent.</li>
-        <li>Restez dans un endroit sûr et évitez les structures fragiles.</li>
-    </ul>
+  <h2>4. Si vous êtes en voiture</h2>
+  <ul>
+    <li>Arrêtez-vous en toute sécurité, loin des structures fragiles.</li>
+    <li>Restez à l’intérieur de votre véhicule jusqu'à la fin des secousses.</li>
+  </ul>
 
-    <div class="conclusion">
-        <p>La fin des secousses ne signifie pas la fin du danger. Agir avec prudence, rester calme et suivre les consignes peut faire la différence.</p>
-        <p><strong>Votre sécurité et celle des autres dépend de votre vigilance.</strong></p>
-    </div>
+  <div class="section-divider"></div>
+
+  <h2>5. Préparez-vous à des répliques</h2>
+  <ul>
+    <li>Des secousses secondaires peuvent suivre le séisme principal.</li>
+    <li>Gardez votre vigilance et soyez prêt à vous protéger à nouveau.</li>
+  </ul>
+
+  <div class="conclusion">
+    <p>Votre calme et vos gestes peuvent sauver des vies. En adoptant les bons réflexes, vous réduisez considérablement les risques pendant un séisme.</p>
+    <p><strong>Restez protégé, restez vigilant, restez en vie.</strong></p>
+  </div>
 </div>
 
 <div class="footer-bottom">
-    <p>&copy; 2025 CodeGeniuses & Co. Tous droits réservés.</p>
+  <p>&copy; 2025 CodeGeniuses & Co. Tous droits réservés.</p>
 </div>
 
 <script>
-    function toggleMenu() {
-        const nav = document.getElementById('navLinks');
-        nav.classList.toggle('active');
-    }
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+  }
 </script>
+
 </body>
 </html>
